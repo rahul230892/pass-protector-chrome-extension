@@ -14,22 +14,24 @@ Pass Protector is useful when you briefly lend your laptop to someone but do not
 - Store settings locally in Chrome.
 - Store the PIN as a local SHA-256 hash instead of plain text.
 
-## Load in Chrome
-
-1. Open `chrome://extensions`.
-2. Turn on **Developer mode**.
-3. Click **Load unpacked**.
-4. Select this folder: `/Users/rahul/Documents/Applications/PassProtectorWebsite`.
-5. Click the Pass Protector extension icon and set your 4-digit code.
-
 ## Install From GitHub
 
-1. Download or clone this repository.
-2. Open `chrome://extensions`.
-3. Enable **Developer mode**.
-4. Click **Load unpacked**.
-5. Select the repository folder.
-6. Open the extension settings and set your 4-digit PIN.
+1. Open the repository on GitHub.
+2. Click **Code** and choose **Download ZIP**.
+3. Unzip the downloaded file.
+4. Open `chrome://extensions`.
+5. Enable **Developer mode**.
+6. Click **Load unpacked**.
+7. Select the unzipped repository folder.
+8. Open the Pass Protector extension settings and set your 4-digit PIN.
+
+## Install With Git
+
+```sh
+git clone https://github.com/rahul230892/pass-protector-chrome-extension.git
+```
+
+Then open `chrome://extensions`, enable **Developer mode**, click **Load unpacked**, and select the cloned repository folder.
 
 ## Configure Locked Websites
 
