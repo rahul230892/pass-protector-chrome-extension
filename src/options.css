@@ -1,0 +1,249 @@
+:root {
+  --ink: #13211d;
+  --muted: #65746d;
+  --cream: #f6efdc;
+  --gold: #f4c95d;
+  --green: #17362f;
+  --line: rgba(23, 54, 47, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(244, 201, 93, 0.22), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(37, 116, 94, 0.22), transparent 30%),
+    #0d1b1f;
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  min-width: 360px;
+}
+
+.shell {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1.1fr);
+  margin: 0 auto;
+  max-width: 980px;
+  min-height: 100vh;
+  padding: 34px;
+}
+
+.hero,
+.panel {
+  background: rgba(246, 239, 220, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+}
+
+.hero {
+  align-content: end;
+  display: grid;
+  padding: 32px;
+}
+
+.badge {
+  align-items: center;
+  background: var(--green);
+  border-radius: 20px;
+  color: var(--gold);
+  display: inline-flex;
+  font: 800 20px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  height: 58px;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  margin-bottom: 28px;
+  width: 58px;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 0.96;
+  margin: 0 0 18px;
+}
+
+p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.panel {
+  padding: 28px;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+input {
+  background: #fffaf0;
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  color: var(--ink);
+  font: 600 16px/1.45 ui-sans-serif, system-ui, sans-serif;
+  outline: none;
+  padding: 14px 16px;
+  width: 100%;
+}
+
+#pin {
+  font: 800 24px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.32em;
+}
+
+input:focus {
+  border-color: #26745f;
+  box-shadow: 0 0 0 4px rgba(38, 116, 95, 0.15);
+}
+
+.hint {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+button {
+  background: var(--green);
+  border: 0;
+  border-radius: 999px;
+  color: #fff6d8;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 900;
+  margin-top: 8px;
+  padding: 16px 18px;
+}
+
+.site-entry {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr auto;
+}
+
+.secondary-button {
+  margin-top: 0;
+  min-width: 92px;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.list-header {
+  align-items: end;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+h2 {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1;
+  margin: 0;
+}
+
+.list-header span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.sites-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  max-height: 250px;
+  overflow: auto;
+  padding-left: 28px;
+}
+
+.sites-list li {
+  align-items: center;
+  background: rgba(255, 250, 240, 0.76);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--ink);
+  font-weight: 800;
+  gap: 12px;
+  padding: 12px 12px 12px 16px;
+}
+
+.sites-list li::marker {
+  color: var(--green);
+  font-weight: 900;
+}
+
+.sites-list li {
+  display: list-item;
+}
+
+.sites-list li span {
+  display: inline-block;
+  max-width: calc(100% - 96px);
+  overflow-wrap: anywhere;
+  vertical-align: middle;
+}
+
+.remove-button {
+  background: #f3dfc7;
+  color: #7a332b;
+  float: right;
+  font-size: 12px;
+  margin: -4px 0 -4px 12px;
+  padding: 10px 12px;
+  width: auto;
+}
+
+.empty-list {
+  background: rgba(255, 250, 240, 0.7);
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  font-size: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.status {
+  color: #26745f;
+  font-size: 14px;
+  font-weight: 800;
+  min-height: 20px;
+  text-align: center;
+}
+
+.status.error {
+  color: #a23a2f;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+}

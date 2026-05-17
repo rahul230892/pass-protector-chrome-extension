@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Pass Protector",
+  "description": "Lock selected websites behind a 4-digit PIN and automatically lock them again after 1 minute.",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_page": "src/options.html",
+  "action": {
+    "default_title": "Pass Protector",
+    "default_popup": "src/options.html"
+  }
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pass Protector Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="badge">PP</div>
+        <p class="eyebrow">Chrome website lock</p>
+        <h1>Keep signed-in websites behind a quick 4-digit gate.</h1>
+        <p>
+          Add the websites you want protected. Every protected site locks on open
+          and locks again automatically after 1 minute.
+        </p>
+      </section>
+
+      <section class="panel">
+        <form id="settings-form">
+          <label for="pin">4-digit code</label>
+          <input
+            id="pin"
+            name="pin"
+            inputmode="numeric"
+            maxlength="4"
+            pattern="[0-9]{4}"
+            placeholder="1234"
+            autocomplete="off"
+          />
+          <p class="hint">Leave this blank if you only want to update the website list.</p>
+
+          <label for="site-entry">Add locked website</label>
+          <div class="site-entry">
+            <input
+              id="site-entry"
+              name="site-entry"
+              type="text"
+              placeholder="instagram.com"
+              spellcheck="false"
+            />
+            <button class="secondary-button" id="add-site" type="button">Add</button>
+          </div>
+          <p class="hint">Enter a domain like instagram.com or web.whatsapp.com.</p>
+
+          <div class="list-header">
+            <h2>Locked websites</h2>
+            <span id="site-count">0 sites</span>
+          </div>
+          <ol id="sites-list" class="sites-list"></ol>
+          <p id="empty-list" class="empty-list">No websites added yet.</p>
+
+          <button type="submit">Save protection settings</button>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
